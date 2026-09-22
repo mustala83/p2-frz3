@@ -1,0 +1,9 @@
+name: p2f2-ci
+on: [push, pull_request]
+jobs:
+  p2f2-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sleep 35
+      - run: bash ci/check.sh
